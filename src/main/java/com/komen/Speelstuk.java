@@ -1,12 +1,19 @@
 package com.komen;
 
+import lombok.*;
+
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.NONE)
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Speelstuk {
-    int waarde;
-    String naam;
-    int id;
-    SpeelstukStatus status;
-    Coordinaat positie;
-    boolean kanBewegen;
-    boolean magRennen;
+
+    private int waarde;
+    private String naam;
+    private int id;
+    private SpeelstukStatus status;
+    private Tegel positie;
+    private boolean kanBewegen;
+    private boolean magRennen;
 }
 
