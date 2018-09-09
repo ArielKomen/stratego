@@ -5,7 +5,7 @@ Dit is een repo om stratego uit te programmeren met behulp van java.
 Fase 1: spel opzetten
 
 De stukken initialiseren en op het speelbord kunnen zetten. Dit spel wordt gespeeld tegen 
-een computer en niet met tweemensen.
+een computer en niet met twee mensen.
 
 Fase 2: spel spelen
 

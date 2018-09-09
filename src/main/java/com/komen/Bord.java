@@ -31,6 +31,22 @@ public class Bord {
         }
     }
 
+    public int getAantalTegels() {
+        return tegels.size();
+    }
+
+    public long getBeloopbareTegels() {
+        return tegels.stream()
+                .filter(Tegel::isBeloopbaar)
+                .count();
+    }
+
+    public long getNietBeloopbareTegels() {
+        return tegels.stream()
+                .filter(t -> !t.isBeloopbaar())
+                .count();
+    }
+
     private Tegel maakTegel(int x, int y) {
         if (NIET_BELOOPBARE_X_COORDINATEN.contains(x) && NIET_BELOOPBARE_Y_COORDINATEN.contains(y)) {
             return maakNietBeloopbareTegel(x, y);
@@ -53,21 +69,5 @@ public class Bord {
                 .yCoordinaat(y)
                 .beloopbaar(true)
                 .build();
-    }
-
-    public int getAantalTegels() {
-        return tegels.size();
-    }
-
-    public long getBeloopbareTegels() {
-        return tegels.stream()
-                .filter(Tegel::isBeloopbaar)
-                .count();
-    }
-
-    public long getNietBeloopbareTegels() {
-        return tegels.stream()
-                .filter(t -> !t.isBeloopbaar())
-                .count();
     }
 }

@@ -9,7 +9,7 @@ import lombok.*;
 public class Speelstuk {
 
     private int waarde;
-    private String naam;
+    private SpeelstukNaam naam;
     private int id;
     private SpeelstukStatus status;
     private Tegel positie;
